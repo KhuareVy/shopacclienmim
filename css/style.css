@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+
+#header{
+    height: 140px;
+    width: 100%;
+}
+
+.logo-brand {
+    height: 100px;
+    padding:10px;
+}
+
+#header img{
+    display: block;
+    height: 80px;
+    margin: auto;
+}
+
+#nav-bar{
+    background-color: #333;
+    display:block;
+    text-align: center;
+    height: 40px;
+    position:relative;
+    z-index: 20;
+}
+
+#nav-bar li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav-bar li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 0 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 40px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    list-style: none;
+}
+
+#nav-bar .fa-solid{
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+
+#nav-bar .sub-nav {
+    display: none;
+    background-color: #333;
+    position:absolute;
+    width: 200px;
+    border-radius: 1px;
+    box-shadow: 0 0 1px;
+    left:0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    
+}
+
+#nav-bar .sub-nav li{
+    display: block;
+    text-align: left;
+    
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#nav-bar li:hover >ul.sub-nav{
+    display: block;
+   
+  
+}
+
+.sub-nav li:hover > a{
+    display:block;
+    background-color: #535353b9;
+}
+
+#nav-bar .sub-nav .sub-nav.has-child {
+    left: 200px;
+    top:0px;
+}
+
+
+#slideshow img{
+    height: 650px;
+}
+
+#main{
+   height: auto;
+   background-color: #212121;
+}
+
+.product-sale h1{
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.slideshow {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+  }
+.slideshow .slide img{
+   width: 100%;
+   height: 650px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+
+    animation: fadeAnimation 5s infinite;
+   
+  }
+.slide:first-child {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 6s;
+}
+.slide:nth-child(4) {
+    animation-delay: 9s;
+}
+.slide:nth-child(5) {
+    animation-delay: 12s;
+  }
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0.5;
+      }
+      20% {
+        opacity: 1;
+      }
+      33.33% {
+        opacity: 1;
+      }
+      53.33% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+}
+
+.product-best-seller{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    gap:2rem;
+    padding: 5% 20%;
+}
+
+.row{
+    position: relative;
+    transition: all .40s;
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+    transition:all .40s;
+}
+
+.row img:hover{
+    transform: scale(0.9);
+}
+
+.row .price {
+    color:#fff;
+    font-size: 2rem;
+
+}
+
+.about-us .column-1{
+    color:#fff;
+    font-size: 2rem;
+   
+}
+
+.about-us{
+    padding: 0 20%;
+    background-color: #333;
+    width: 100%;
+    text-align: left;display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.column-1{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.column-1 p{
+    text-align: justify;
+}
+  
+  .column {
+    background-color: #ccc;
+    padding: 20px;
+  }
+
+  .look-book{
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .look-book h1{
+    padding-bottom: 20px;
+  }
+
+  .pic-3 img{
+    padding: 50px;
+  }
+
+  #footer {
+    border-top: 1px solid rgb(139, 139, 139);
+  }
+
+  #footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  #footer .container .column {
+    background-color: transparent;
+    padding: 20px;
+  }
+
+  .column img{
+    width:140px;
+  }
+
+#footer .column{
+    color:#fff;
+    font-size: 1.6rem;
+}
+
+#footer .column.column3{
+    text-align: left;
+    padding:10px;
+}
+
+#footer .column.column3 img{
+    width: 15px;
+    padding-left: 2px;
+}
+
+.information{
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px;
+    color:#fff;
+}
